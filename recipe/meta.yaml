@@ -1,5 +1,5 @@
 {% set name = "serverengine" %}
-{% set version = "2.2.1" %}
+{% set version = "2.2.2" %}
 
 package:
   name: rb-{{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://rubygems.org/downloads/{{ name }}-{{ version }}.gem
-  sha256: 0fd386d92be7df7ba65662135f3558be1a9c29bc032e2742494b752ae13212e3
+  sha256: a846e52dec93f35c834510006cbaaa2cc067f24d387a659ed359f80ba353d3d2
 
 build:
   noarch: generic
