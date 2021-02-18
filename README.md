@@ -5,11 +5,13 @@ Home: https://rubygems.org/gems/serverengine
 
 Package license: Apache-2.0
 
-Feedstock license: BSD 3-Clause
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/rb-serverengine-feedstock/blob/master/LICENSE.txt)
 
 Summary: A framework to implement robust multiprocess servers like Unicorn
 
+Development: https://github.com/treasure-data/serverengine
 
+Documentation: https://www.rubydoc.info/gems/serverengine
 
 Current build status
 ====================
