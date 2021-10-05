@@ -1,5 +1,5 @@
 {% set name = "serverengine" %}
-{% set version = "2.2.1" %}
+{% set version = "2.2.4" %}
 
 package:
   name: rb-{{ name|lower }}
@@ -7,13 +7,13 @@ package:
 
 source:
   url: https://rubygems.org/downloads/{{ name }}-{{ version }}.gem
-  sha256: 0fd386d92be7df7ba65662135f3558be1a9c29bc032e2742494b752ae13212e3
+  sha256: 495bbe713e301a08562ada003e6ad1202a03c9535d0c47b6ada32840fa7bf0bf 
 
 build:
   noarch: generic
   number: 0
   script:
-    - gem install -N -l -V --norc --ignore-dependencies {{ name }}-{{ version }}.gem
+    - gem install -N -l -V --norc --ignore-dependencies -n $PREFIX/bin {{ name }}-{{ version }}.gem
     - gem unpack {{ name }}-{{ version }}.gem
   skip: {{ win }}
 
@@ -21,7 +21,7 @@ requirements:
   host:
     - ruby
   run:
-    - ruby
+    - {{ pin_compatible('ruby', max_pin='x.x') }}
     - rb-sigdump >=0.2.2,<1.0.0
 
 test:
@@ -39,7 +39,5 @@ about:
 
 extra:
   recipe-maintainers:
-    - oblute
-    - benhuff
-    - rluria14
+    - mxr-conda
     - conda-forge/ruby
